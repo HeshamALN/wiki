@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+</head>
+<body>
+	{% for lists in title %}
+	<li>
+	<a href="{{page.get_absolute_url}}">Click here</a>
+
+	
+		<h1>{{lists.title}}</h1>
+	<!-- </li>
+	<li> -->
+		<p>{{lists.content}}</p>
+	</li>
+
+	{% endfor %}
+</body>
+</html>
