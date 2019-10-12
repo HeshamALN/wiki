@@ -6,11 +6,14 @@
 <body>
 	{% for lists in xtitle %}
 		<li>
-		<a href="{% url 'page-detail' lists.id %}">Click here</a>
+		<a href="{{lists.get_absolute_url}}">
+			
+		 "Click here"			
+		</a>	
 
 			<h1>{{lists.title}}</h1>
 			<p>{{lists.content}}</p>
-			<p>{{list.last_update}}</p>
+			<p>Last Update:{{lists.last_update}}</p>
 		</li>
 
 	{% endfor %}
