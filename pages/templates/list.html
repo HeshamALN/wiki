@@ -4,16 +4,14 @@
 	<title>List</title>
 </head>
 <body>
-	{% for lists in title %}
-	<li>
-	<a href="{{page.get_absolute_url}}">Click here</a>
+	{% for lists in xtitle %}
+		<li>
+		<a href="{% url 'page-detail' lists.id %}">Click here</a>
 
-	
-		<h1>{{lists.title}}</h1>
-	<!-- </li>
-	<li> -->
-		<p>{{lists.content}}</p>
-	</li>
+			<h1>{{lists.title}}</h1>
+			<p>{{lists.content}}</p>
+			<p>{{list.last_update}}</p>
+		</li>
 
 	{% endfor %}
 </body>
